@@ -8,7 +8,7 @@ function Header() {
                 <a href="#" className="navbar-brand text-light mt-5" />
 
                 <div className="container-fluid flex-column">
-                    <a class="navbar-brand" href="#">
+                    <a className="navbar-brand" href="#">
                         <img src="https://th.bing.com/th/id/R.0b562de767b80bfa845150849a5c1f42?rik=vsJBTMe5%2fmSh7w&pid=ImgRaw&r=0" alt="" width="150" height="80" />
                     </a>
 
