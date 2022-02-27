@@ -27,10 +27,14 @@
     width: 22rem;
 }
 
-.login-btn {
+.btn {
     background-color: #655D8A;
+    color: white;
+    outline: #655D8A;
 }
 
-.login-btn:hover {
+.btn:hover {
     background-color: #D885A3;
+    outline: #D885A3;
+    color: white;
 }
