@@ -14,7 +14,6 @@ function Categories() {
         const borderStyle = '1px solid rgba(1, 1, 1, 1)';
         const deleteButton = <button className="btn btn-success mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
-
         return (
             <div className="container category-row">
                 <div className="row" style={{border: borderStyle}} key={index}>
