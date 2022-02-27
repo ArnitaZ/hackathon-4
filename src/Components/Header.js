@@ -4,8 +4,8 @@ import "./Header.css"
 function Header() {
     return (
         <>
-            <nav className="navbar navbar-expand navbar-light bg-light d-flex flex-column align-item-start" id="sidebar">
-                <a href="#" className="navbar-brand text-light mt-5" />
+            <nav className="navbar navbar-expand navbar-light d-flex flex-column align-item-start" id="sidebar">
+                <a href="#" className="navbar-brand text-light" />
 
                 <div className="container-fluid flex-column">
                     <a className="navbar-brand" href="#">

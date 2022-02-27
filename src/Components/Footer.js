@@ -1,14 +1,14 @@
 function Footer() {
 
     return (
-        <div className="fixed-bottom">
-            <footer className="d-flex flex-wrap justify-content-between bg-light align-items-center py-3 my-4 border-top">
+        <div className="footer-container">
+            <footer className="d-flex flex-wrap justify-content-between align-items-center py-1 my-2 border-top">
 
                 <div className="col-md-4 d-flex align-items-center mx-4">
                     <span className="text-muted">&copy; 2022 Travel with us, Inc</span>
                 </div>
 
-                <ul className="nav col-md-4 justify-content-end list-unstyled d-flex mx-4">
+                <ul className="nav col-md-4 justify-content-end list-unstyled d-flex mx-4 mt-1">
 
                     <li className="ms-3">
                         <a className="text-muted"
