@@ -6,12 +6,6 @@
     user-select: none;
 }
 
-/* @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-} */
-
 .login-container {
     min-height: 90vh;
     align-items: center;
@@ -20,7 +14,6 @@
 
 .home-container {
     min-height: 90vh;
-
 }
 
 .form-floating {
@@ -37,4 +30,12 @@
     background-color: #D885A3;
     outline: #D885A3;
     color: white;
+}
+
+.order-row, .product-row, .category-row {
+    min-width: 100%;
+}
+
+.category-container, .order-container {
+    min-width: 100%;
 }

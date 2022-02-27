@@ -12,10 +12,10 @@ function Categories() {
 
     const categoriesRow = categories.map((category, index) => {
         const borderStyle = '1px solid rgba(1, 1, 1, 1)';
-        const deleteButton = <button className="btn mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
+        const deleteButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteCategory(index)}>Delete</button>
 
         return (
-            <div className="container category-row mt-1">
+            <div className="container category-row category-container mt-1">
                 <div className="row" style={{ border: borderStyle }} key={index}>
                     <div className="col-1">
                         {category.id}
@@ -27,7 +27,7 @@ function Categories() {
                         {category.description}
                     </div>
                     <div className="col-2">
-                        <button className="btn mx-1 my-1">Edit</button>
+                        <button className="btn btn-sm mx-1 my-1">Edit</button>
                         {deleteButton}
                     </div>
                 </div>
@@ -43,7 +43,7 @@ function Categories() {
                     <p className="text-muted">Categories</p>
                 </div>
                 <div className="col d-flex justify-content-end">
-                    <button className="btn">Create category</button>
+                    <button className="btn btn-sm">Create category</button>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@ function Categories() {
                 <div className="col-4">
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn" type="submit">Search</button>
+                            <button className="btn btn-sm" type="submit">Search</button>
                     </form>
                 </div>
             </div>
