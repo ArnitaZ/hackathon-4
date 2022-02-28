@@ -5,7 +5,6 @@ import Footer from "./Components/Footer"
 import Header from "./Components/Header"
 
 function App() {
-
   return (
     <div>
       <div className="container d-flex flew-column flex-md-row">
