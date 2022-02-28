@@ -1,6 +1,5 @@
 import { useState } from "react";
 import getDataLaura from "../API/getDataLaura"
-import "./Products.css"
 
 function Products() {
 
@@ -19,7 +18,7 @@ function Products() {
             <div className="container product-row mt-1">
                 <div className="row" style={{ border: borderStyle }} key={index}>
                     <div className="col-2">
-                        <img src={product.coverImg} className="img-thumbnail"/>                      
+                        <img src={product.coverImg} style={{ width: "100px" }} className="img-thumbnail"/>
                     </div>
                     <div className="col-1">
                         {product.id}
