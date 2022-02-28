@@ -21,11 +21,11 @@ function Orders() {
                         {order.id}
                     </div>
                     <div className="col-3">
-                        <span style={{ fontWeight: 'bold' }}>{order.customer.name}</span><br></br>
-                        {order.customer.street}<br></br>
-                        {order.customer.city}<br></br>
-                        {order.customer.zip}<br></br>
-                        {order.customer.country}<br></br>
+                        <span style={{ fontWeight: 'bold' }}>{order.customer.name}</span><br/>
+                        {order.customer.street}<br/>
+                        {order.customer.city}<br/>
+                        {order.customer.zip}<br/>
+                        {order.customer.country}<br/>
                     </div>
                     <div className="col-1">
                         {order.quantity}
@@ -52,7 +52,7 @@ function Orders() {
     })
 
     return (
-        <div>
+        <div className="container">
 
             <div className="row mt-3">
                 <div className="col">
