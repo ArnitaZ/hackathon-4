@@ -1,0 +1,41 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.login-container {
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    min-height: 90vh;
+}
+
+.form-floating {
+    width: 22rem;
+}
+
+.btn {
+    background-color: #655D8A;
+    color: white;
+    outline: #655D8A;
+}
+
+.btn:hover {
+    background-color: #D885A3;
+    outline: #D885A3;
+    color: white;
+}
+
+.order-row, .product-row, .category-row {
+    min-width: 100%;
+}
+
+.category-container, .order-container {
+    min-width: 100%;
+}
