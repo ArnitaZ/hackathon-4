@@ -13,7 +13,17 @@ function Orders() {
 
     const ordersRow = orders.map((order, index) => {
         const borderStyle = '1px solid rgba(1, 1, 1, 1)';
-        const deleteButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteOrder(index)}>Delete</button>
+        const deleteButton = <button className="btn btn-purple btn-sm mx-1 my-1" onClick={() => deleteOrder(index)}>Delete</button>
+    
+    let badgeText
+    if (order.status === 'pending') {
+        badgeText = <button className="btn btn-warning btn-sm">Pending</button>
+    }  else if (order.status === 'cancelled') {
+        badgeText = <button className="btn btn-danger btn-sm">Cancelled</button>
+    } else if (order.status === 'completed') {
+        badgeText = <button className="btn btn-success btn-sm">Success</button>
+    }
+
 
         return (
             <div className="container order-row mt-1">
@@ -41,10 +51,10 @@ function Orders() {
                         total sum
                     </div>
                     <div className="col-2">
-                        {order.status}
+                        {badgeText && <div>{badgeText}</div>}
                     </div>
                     <div className="col-2">
-                        <button className="btn btn-sm mx-1 my-1">Edit</button>
+                        <button className="btn btn-purple btn-sm mx-1 my-1">Edit</button>
                         {deleteButton}
                     </div>
                 </div>
@@ -65,7 +75,7 @@ function Orders() {
                 <div className="col-4 mb-3">
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-sm" type="submit">Search</button>
+                        <button className="btn btn-purple btn-sm" type="submit">Search</button>
                     </form>
                 </div>
             </div>

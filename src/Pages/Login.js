@@ -23,7 +23,7 @@ function Login(props) {
                     <label for="floatingPassword">Password</label>
                 </div>
                 <Link to="/categories">
-                    <button className="w-100 btn btn-lg mt-3 login-btn text-white" type="button">Log in</button>
+                    <button className="w-100 btn btn-purple btn-lg mt-3 login-btn text-white" type="button">Log in</button>
                 </Link>
             </form>
         </div>
