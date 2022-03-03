@@ -1,5 +1,6 @@
 import { useState } from "react";
 import getDataLaura from "../API/getDataLaura"
+import "./Login.css"
 
 function Products() {
 
@@ -12,7 +13,7 @@ function Products() {
 
     const productsRow = products.map((product, index) => {
         const borderStyle = '1px solid rgba(1, 1, 1, 1)';
-        const deleteButton = <button className="btn btn-sm mx-1 my-1" onClick={() => deleteProduct(index)}>Delete</button>
+        const deleteButton = <button className="btn btn-purple btn-sm mx-1 my-1" onClick={() => deleteProduct(index)}>Delete</button>
 
         return (
             <div className="container product-row mt-1">
@@ -36,7 +37,7 @@ function Products() {
                         {product.discountedPrice} Eur
                     </div>
                     <div className="col-2">
-                        <button className="btn btn-sm mx-1 my-1">Edit</button>
+                        <button className="btn btn-purple btn-sm mx-1 my-1">Edit</button>
                         {deleteButton}
                     </div>
                 </div>
@@ -52,7 +53,7 @@ function Products() {
                     <p className="text-muted">Products</p>
                 </div>
                 <div className="col d-flex justify-content-end">
-                    <button className="btn btn-sm">Create product</button>
+                    <button className="btn btn-purple btn-sm">Create product</button>
                 </div>
             </div>
 
@@ -60,7 +61,7 @@ function Products() {
                 <div className="col-4 mb-3">
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-sm" type="submit">Search</button>
+                            <button className="btn btn-purple btn-sm" type="submit">Search</button>
                     </form>
                 </div>
             </div>
