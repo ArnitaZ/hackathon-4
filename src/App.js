@@ -1,8 +1,8 @@
-import Content from "./Components/Content"
+import Content from "./Components/Content";
 // import Login from "./Pages/Login"
 // import { useState } from "react"
-import Footer from "./Components/Footer"
-import Header from "./Components/Header"
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

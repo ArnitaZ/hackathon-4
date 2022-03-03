@@ -30,6 +30,7 @@ function Products() {
               src={product.coverImg}
               style={{ width: "100px" }}
               className="img-thumbnail"
+              alt="landmark"
             />
           </div>
           <div className="col-1">{product.id}</div>
