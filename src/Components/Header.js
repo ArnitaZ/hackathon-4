@@ -10,14 +10,14 @@ function Header() {
       >
         {/* <a href="#" className="navbar-brand text-light" /> */}
         <div className="container-fluid flex-column">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             <img
               src="https://th.bing.com/th/id/R.0b562de767b80bfa845150849a5c1f42?rik=vsJBTMe5%2fmSh7w&pid=ImgRaw&r=0"
               alt="landmark"
               width="150"
               height="80"
             />
-          </a>
+          </Link>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav d-flex flex-column mb-2 mb-lg-0">
               <li className="nav-item">
