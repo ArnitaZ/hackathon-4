@@ -68,58 +68,58 @@ function Orders() {
 
   return (
     <div className="container">
-      <div className="container d-flex flew-column flex-md-row">
-        <Header />
-      </div>
-      <div className="row mt-3">
-        <div className="col">
-          <p className="text-muted">Orders</p>
+      <div className="col">
+        <div className="row mt-3">
+          <div className="container d-flex flew-column flex-md-row">
+            <Header />
+            <p className="text-muted">Orders</p>
+          </div>
         </div>
-      </div>
 
-      <div className="row mt-3 d-flex justify-content-end">
-        <div className="col-4 mb-3">
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-purple btn-sm" type="submit">
-              Search
-            </button>
-          </form>
+        <div className="row mt-3 d-flex justify-content-end">
+          <div className="col-4 mb-3">
+            <form className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-purple btn-sm" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div className="order-row mt-2">
-        <div className="row mx-1">
-          <div className="col-1">
-            <h6>ID</h6>
+        <div className="order-row mt-2">
+          <div className="row mx-1">
+            <div className="col-1">
+              <h6>ID</h6>
+            </div>
+            <div className="col-3">
+              <h6>Customer</h6>
+            </div>
+            <div className="col-1">
+              <h6>Qty</h6>
+            </div>
+            <div className="col-1">
+              <h6>Price</h6>
+            </div>
+            <div className="col-1">
+              <h6>VAT</h6>
+            </div>
+            <div className="col-1">
+              <h6>Total</h6>
+            </div>
+            <div className="col-2">
+              <h6>Status</h6>
+            </div>
           </div>
-          <div className="col-3">
-            <h6>Customer</h6>
-          </div>
-          <div className="col-1">
-            <h6>Qty</h6>
-          </div>
-          <div className="col-1">
-            <h6>Price</h6>
-          </div>
-          <div className="col-1">
-            <h6>VAT</h6>
-          </div>
-          <div className="col-1">
-            <h6>Total</h6>
-          </div>
-          <div className="col-2">
-            <h6>Status</h6>
-          </div>
+          <div>{ordersRow}</div>
         </div>
-        <div>{ordersRow}</div>
+        <Pagination />
       </div>
-      <Pagination />
     </div>
   );
 }

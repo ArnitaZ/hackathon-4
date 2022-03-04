@@ -1,9 +1,9 @@
 .navbar {
-    height: 93vh;
-    box-sizing: border-box;
-    padding: 0;
+  height: 16vh;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .nav-link {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }

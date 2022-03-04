@@ -39,47 +39,47 @@ function Categories() {
 
   return (
     <div>
-      <div className="container d-flex flew-column flex-md-row">
-        <Header />
-      </div>
-      <div className="row mt-3">
-        <div className="col">
-          <p className="text-muted">Categories</p>
-        </div>
-        <div className="col d-flex justify-content-end">
-          <button className="btn btn-purple btn-sm">Create category</button>
-        </div>
-      </div>
+      <div className="col">
+        <div className="row mt-4">
+          <div className="container d-flex flew-column flex-md-row">
+            <Header />
 
-      <div className="row mt-3 d-flex justify-content-end">
-        <div className="col-4">
-          <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-purple btn-sm" type="submit">
-              Search
-            </button>
-          </form>
+            <p className="text-muted">Categories</p>
+          </div>
+          <div className="col d-flex justify-content-end">
+            <button className="btn btn-purple btn-sm">Create category</button>
+          </div>
         </div>
-      </div>
 
-      <div className="category-row mt-2">
-        <div className="row mx-1">
-          <div className="col-1">
-            <h6>ID</h6>
-          </div>
-          <div className="col-2">
-            <h6>Title</h6>
-          </div>
-          <div className="col-7">
-            <h6>Description</h6>
+        <div className="row mt-3 d-flex justify-content-end">
+          <div className="col-4">
+            <form className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button className="btn btn-purple btn-sm" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
-        <div>{categoriesRow}</div>
+        <div className="category-row mt-2">
+          <div className="row mx-1">
+            <div className="col-1">
+              <h6>ID</h6>
+            </div>
+            <div className="col-2">
+              <h6>Title</h6>
+            </div>
+            <div className="col-7">
+              <h6>Description</h6>
+            </div>
+          </div>
+          <div>{categoriesRow}</div>
+        </div>
       </div>
     </div>
   );

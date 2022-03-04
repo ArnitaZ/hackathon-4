@@ -5,12 +5,12 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <div>
-      {/* <div className="container d-flex flew-column flex-md-row"> */}
-      {/* <Header /> */}
-      <div className="ps-0 ps-md-5 flex-grow-1">
-        <Content />
+      <div className="container d-flex flew-column flex-md-row">
+        {/* <Header /> */}
+        <div className="ps-0 ps-md-5 flex-grow-1">
+          <Content />
+        </div>
       </div>
-      {/* </div> */}
       <Footer />
     </div>
   );
