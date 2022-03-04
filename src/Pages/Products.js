@@ -1,8 +1,8 @@
 import { useState } from "react";
 import getDataLaura from "../API/getDataLaura";
-import "./Login.css";
 import Pagination from "../Components/Pagination";
 import Header from "../Components/Header";
+import "./Login.css";
 
 function Products() {
   const [products, setProducts] = useState(getDataLaura());
