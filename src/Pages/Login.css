@@ -39,3 +39,7 @@
 .category-container, .order-container {
     min-width: 100%;
 }
+
+.page-link {
+    color: #655D8A;
+}
