@@ -1,6 +1,7 @@
 import { useState } from "react";
 import getDataLaura from "../API/getDataLaura";
 import Pagination from "../Components/Pagination";
+import Header from "../Components/Header";
 import "./Login.css";
 
 function Products() {
@@ -49,6 +50,9 @@ function Products() {
 
   return (
     <div>
+      <div className="container d-flex flew-column">
+        <Header />
+      </div>
       <div className="row mt-3">
         <div className="col">
           <p className="text-muted">Products</p>
@@ -73,7 +77,6 @@ function Products() {
           </form>
         </div>
       </div>
-
       <div className="category-row mt-2">
         <div className="row mx-1">
           <div className="col-2">
