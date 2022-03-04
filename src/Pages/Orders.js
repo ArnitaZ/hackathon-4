@@ -16,14 +16,13 @@ function Orders() {
         const deleteButton = <button className="btn btn-purple btn-sm mx-1 my-1" onClick={() => deleteOrder(index)}>Delete</button>
     
     let badgeText
-    if (order.status === 'pending') {
-        badgeText = <button className="btn btn-warning btn-sm">Pending</button>
-    }  else if (order.status === 'cancelled') {
-        badgeText = <button className="btn btn-danger btn-sm">Cancelled</button>
-    } else if (order.status === 'completed') {
-        badgeText = <button className="btn btn-success btn-sm">Success</button>
-    }
-
+        if (order.status === 'pending') {
+            badgeText = <button className="btn btn-warning btn-sm">Pending</button>
+        }  else if (order.status === 'cancelled') {
+            badgeText = <button className="btn btn-danger btn-sm">Cancelled</button>
+        } else if (order.status === 'completed') {
+            badgeText = <button className="btn btn-success btn-sm">Success</button>
+        }
 
         return (
             <div className="container order-row mt-1">
