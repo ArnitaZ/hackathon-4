@@ -33,7 +33,7 @@ function Orders() {
     }
 
     return (
-      <div className="container order-row mt-1">
+      <div className="container mt-1">
         <div
           className="row d-flex order-container align-items-center"
           style={{ border: borderStyle }}
@@ -67,32 +67,34 @@ function Orders() {
   });
 
   return (
-    <div className="container">
-      <div className="col">
-        <div className="row mt-3">
-          <div className="container d-flex flew-column flex-md-row">
+    <div className="container-fluid">
+      <div className="row mt-4">
+        <div className="col-2">
+          <div>
             <Header />
-            <p className="text-muted">Orders</p>
           </div>
         </div>
 
-        <div className="row mt-3 d-flex justify-content-end">
-          <div className="col-4 mb-3">
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-purple btn-sm" type="submit">
-                Search
-              </button>
-            </form>
+        <div className="col-10">
+          <div className="row mt-4 mb-5 d-flex justify-content-between">
+            <div className="col-8">
+              <p className="h3">Orders</p>
+            </div>
+            <div className="col-4 mb-3">
+              <form className="d-flex">
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button className="btn btn-purple btn-sm" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
 
-        <div className="order-row mt-2">
           <div className="row mx-1">
             <div className="col-1">
               <h6>ID</h6>
@@ -118,9 +120,16 @@ function Orders() {
           </div>
           <div>{ordersRow}</div>
         </div>
-        <Pagination />
+
       </div>
+
+      <div className="row d-flex flex-row-reverse my-5 pagination--bottom">
+            <div className="col-6">
+              <Pagination />
+            </div>
+          </div>
     </div>
+
   );
 }
 

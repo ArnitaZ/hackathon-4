@@ -49,58 +49,62 @@ function Products() {
   });
 
   return (
-    <div>
-      <div className="col">
-        <div className="row mt-3">
-          <div className="container d-flex flew-column">
+    <div className="container-fluid">
+      <div className="row mt-4">
+        <div className="col-2">
+          <div>
             <Header />
-
-            <p className="text-muted">Products</p>
-          </div>
-          <div className="col d-flex justify-content-end">
-            <button className="btn btn-purple btn-sm">Create product</button>
           </div>
         </div>
-
-        <div className="row mt-3 d-flex justify-content-end">
-          <div className="col-4 mb-3">
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-purple btn-sm" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
-        <div className="category-row mt-2">
-          <div className="row mx-1">
-            <div className="col-2">
-              <h6>Image</h6>
+        <div className="col-10">
+          <div className="row mt-4 mb-5 d-flex justify-content-between">
+            <div className="col-8">
+              <p className="h3">Products</p>
             </div>
-            <div className="col-1">
-              <h6>ID</h6>
-            </div>
-            <div className="col-1">
-              <h6>Title</h6>
-            </div>
-            <div className="col-4">
-              <h6>Description</h6>
-            </div>
-            <div className="col-1">
-              <h6>Price</h6>
-            </div>
-            <div className="col-1">
-              <h6>Discounted price</h6>
+            <div className="col-4 d-flex flex-column">
+              <button className="btn btn-purple btn-sm my-3">Create product</button>
+              <form className="d-flex">
+                <input
+                  className="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button className="btn btn-purple btn-sm" type="submit">
+                  Search
+                </button>
+              </form>
             </div>
           </div>
-          <div>{productsRow}</div>
+          <div className="category-row mt-2">
+            <div className="row mx-1">
+              <div className="col-2">
+                <h6>Image</h6>
+              </div>
+              <div className="col-1">
+                <h6>ID</h6>
+              </div>
+              <div className="col-1">
+                <h6>Title</h6>
+              </div>
+              <div className="col-4">
+                <h6>Description</h6>
+              </div>
+              <div className="col-1">
+                <h6>Price</h6>
+              </div>
+              <div className="col-1">
+                <h6>Discounted price</h6>
+              </div>
+            </div>
+            <div>{productsRow}</div>
+          </div>
+          <div className="row d-flex flex-row-reverse my-5">
+            <div className="col-6">
+              <Pagination />
+            </div>
+          </div>
         </div>
-        <Pagination />
       </div>
     </div>
   );
