@@ -6,13 +6,24 @@ import "./Login.css";
 
 function Products() {
   const [products, setProducts] = useState(getDataLaura());
+  const [filter, setFilter] = useState('')
 
   const deleteProduct = (productIndex) => {
     products.splice(productIndex, 1);
     setProducts([...products]);
   };
 
-  const productsRow = products.map((product, index) => {
+  const searchText = (event) => {
+    setFilter(event.target.value)
+  }
+
+  let dataSearch = products.filter(item => {
+    return Object.keys(item).some(key => 
+        item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
+      )
+  })
+
+  const productsRow = dataSearch.map((product, index) => {
     const borderStyle = "1px solid rgba(1, 1, 1, 1)";
     const deleteButton = (
       <button
@@ -69,6 +80,8 @@ function Products() {
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
+                  value={filter}
+                  onChange={searchText.bind(this)}
                 />
                 <button className="btn btn-purple btn-sm" type="submit">
                   Search
