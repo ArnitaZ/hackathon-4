@@ -6,13 +6,24 @@ import "./Login.css";
 
 function Orders() {
   const [orders, setOrders] = useState(getDataLaura());
+  const [filter, setFilter] = useState('')
 
   const deleteOrder = (orderIndex) => {
     orders.splice(orderIndex, 1);
     setOrders([...orders]);
   };
 
-  const ordersRow = orders.map((order, index) => {
+  const searchText = (event) => {
+    setFilter(event.target.value)
+  }
+
+  let dataSearch = orders.filter(item => {
+    return Object.keys(item).some(key => 
+        item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
+      )
+  })
+
+  const ordersRow = dataSearch.map((order, index) => {
     const borderStyle = "1px solid rgba(1, 1, 1, 1)";
     const deleteButton = (
       <button
@@ -41,15 +52,15 @@ function Orders() {
         >
           <div className="col-1">{order.id}</div>
           <div className="col-3">
-            <span style={{ fontWeight: "bold" }}>{order.customer.name}</span>
+            <span style={{ fontWeight: "bold" }}>{order.customerName}</span>
             <br />
-            {order.customer.street}
+            {order.customerStreet}
             <br />
-            {order.customer.city}
+            {order.customerCity}
             <br />
-            {order.customer.zip}
+            {order.customerZIP}
             <br />
-            {order.customer.country}
+            {order.customerCountry}
             <br />
           </div>
           <div className="col-1">{order.quantity}</div>
@@ -87,6 +98,8 @@ function Orders() {
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
+                  value={filter}
+                  onChange={searchText.bind(this)}
                 />
                 <button className="btn btn-purple btn-sm" type="submit">
                   Search

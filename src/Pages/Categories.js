@@ -5,13 +5,24 @@ import "./Login.css";
 
 function Categories() {
   const [categories, setCategories] = useState(getDataLaura());
+  const [filter, setFilter] = useState('')
 
   const deleteCategory = (categoryIndex) => {
     categories.splice(categoryIndex, 1);
     setCategories([...categories]);
   };
 
-  const categoriesRow = categories.map((category, index) => {
+  const searchText = (event) => {
+    setFilter(event.target.value)
+  }
+
+  let dataSearch = categories.filter(item => {
+    return Object.keys(item).some(key => 
+        item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
+      )
+  })
+
+  const categoriesRow = dataSearch.map((category, index) => {
     const borderStyle = "1px solid rgba(1, 1, 1, 1)";
     const deleteButton = (
       <button
@@ -52,12 +63,15 @@ function Categories() {
             </div>
             <div className="col-4 d-flex flex-column">
               <button className="btn btn-purple btn-sm my-3">Create category</button>
+
               <form className="d-flex">
                 <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
+                  value={filter}
+                  onChange={searchText.bind(this)}
                 />
                 <button className="btn btn-purple btn-sm" type="submit">
                   Search
@@ -66,19 +80,19 @@ function Categories() {
             </div>
           </div>
           <div className="category-row mt-2">
-        <div className="row mx-1">
-          <div className="col-1">
-            <h6>ID</h6>
+            <div className="row mx-1">
+              <div className="col-1">
+                <h6>ID</h6>
+              </div>
+              <div className="col-2">
+                <h6>Title</h6>
+              </div>
+              <div className="col-7">
+                <h6>Description</h6>
+              </div>
+            </div>
+            <div>{categoriesRow}</div>
           </div>
-          <div className="col-2">
-            <h6>Title</h6>
-          </div>
-          <div className="col-7">
-            <h6>Description</h6>
-          </div>
-        </div>
-        <div>{categoriesRow}</div>
-      </div>
         </div>
       </div>
     </div>
