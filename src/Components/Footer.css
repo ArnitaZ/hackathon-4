@@ -1,3 +1,7 @@
 .footer-container {
     min-height: 10vh;
 }
+
+.content-container {
+    min-height: 90vh;
+}

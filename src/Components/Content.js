@@ -3,11 +3,12 @@ import Categories from "../Pages/Categories";
 import Login from "../Pages/Login";
 import Orders from "../Pages/Orders";
 import Products from "../Pages/Products";
+import "./Footer.css";
 
 function Content() {
   return (
     <div>
-      <div className="container d-flex flew-column">
+      <div className="container content-container d-flex flew-column">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/categories" element={<Categories />} />
