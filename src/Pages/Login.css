@@ -20,13 +20,13 @@
     width: 22rem;
 }
 
-.btn {
+.btn-purple {
     background-color: #655D8A;
     color: white;
     outline: #655D8A;
 }
 
-.btn:hover {
+.btn-purple:hover {
     background-color: #D885A3;
     outline: #D885A3;
     color: white;
@@ -38,4 +38,8 @@
 
 .category-container, .order-container {
     min-width: 100%;
+}
+
+.page-link {
+    color: #655D8A;
 }
