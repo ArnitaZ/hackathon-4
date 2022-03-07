@@ -17,7 +17,7 @@ function PaginationII() {
   );
 
   const renderProducts = currentProducts.map((product, index) => {
-    return <li key={index}>{product}</li>;
+    return <li key={index}>{product.list}</li>;
   });
   function handlePageChange(pageNumber) {
     console.log(`active page is ${pageNumber}`);
