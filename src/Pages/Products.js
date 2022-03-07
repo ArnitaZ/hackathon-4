@@ -3,6 +3,7 @@ import getDataLaura from "../API/getDataLaura";
 import Pagination from "../Components/Pagination";
 import Header from "../Components/Header";
 import "./Login.css";
+import PaginationII from "../Components/PaginationII";
 
 function Products() {
   const [products, setProducts] = useState(getDataLaura());
@@ -73,7 +74,9 @@ function Products() {
               <p className="h3">Products</p>
             </div>
             <div className="col-4 d-flex flex-column">
-              <button className="btn btn-purple btn-sm my-3">Create product</button>
+              <button className="btn btn-purple btn-sm my-3">
+                Create product
+              </button>
               <form className="d-flex">
                 <input
                   className="form-control me-2"
@@ -115,6 +118,9 @@ function Products() {
           <div className="row d-flex flex-row-reverse my-5">
             <div className="col-6">
               <Pagination />
+            </div>
+            <div className="col-6">
+              <PaginationII />
             </div>
           </div>
         </div>
