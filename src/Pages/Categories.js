@@ -5,7 +5,7 @@ import "./Login.css";
 
 function Categories() {
   const [categories, setCategories] = useState(getDataLaura());
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState("");
 
   const deleteCategory = (categoryIndex) => {
     categories.splice(categoryIndex, 1);
@@ -13,14 +13,17 @@ function Categories() {
   };
 
   const searchText = (event) => {
-    setFilter(event.target.value)
-  }
+    setFilter(event.target.value);
+  };
 
-  let dataSearch = categories.filter(item => {
-    return Object.keys(item).some(key => 
-        item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
-      )
-  })
+  let dataSearch = categories.filter((item) => {
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filter.toString().toLowerCase())
+    );
+  });
 
   const categoriesRow = dataSearch.map((category, index) => {
     const borderStyle = "1px solid rgba(1, 1, 1, 1)";
@@ -62,7 +65,9 @@ function Categories() {
               <p className="h3">Categories</p>
             </div>
             <div className="col-4 d-flex flex-column">
-              <button className="btn btn-purple btn-sm my-3">Create category</button>
+              <button className="btn btn-purple btn-sm my-3">
+                Create category
+              </button>
 
               <form className="d-flex">
                 <input
