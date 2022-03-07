@@ -3,11 +3,10 @@ import getDataLaura from "../API/getDataLaura";
 import Pagination from "../Components/Pagination";
 import Header from "../Components/Header";
 import "./Login.css";
-import PaginationII from "../Components/PaginationII";
 
 function Products() {
   const [products, setProducts] = useState(getDataLaura());
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState("");
 
   const deleteProduct = (productIndex) => {
     products.splice(productIndex, 1);
@@ -15,14 +14,17 @@ function Products() {
   };
 
   const searchText = (event) => {
-    setFilter(event.target.value)
-  }
+    setFilter(event.target.value);
+  };
 
-  let dataSearch = products.filter(item => {
-    return Object.keys(item).some(key => 
-        item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
-      )
-  })
+  let dataSearch = products.filter((item) => {
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filter.toString().toLowerCase())
+    );
+  });
 
   const productsRow = dataSearch.map((product, index) => {
     const borderStyle = "1px solid rgba(1, 1, 1, 1)";
@@ -118,9 +120,6 @@ function Products() {
           <div className="row d-flex flex-row-reverse my-5">
             <div className="col-6">
               <Pagination />
-            </div>
-            <div className="col-6">
-              <PaginationII />
             </div>
           </div>
         </div>

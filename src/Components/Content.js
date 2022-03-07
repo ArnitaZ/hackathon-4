@@ -4,7 +4,6 @@ import Login from "../Pages/Login";
 import Orders from "../Pages/Orders";
 import Products from "../Pages/Products";
 import "./Footer.css";
-import PaginationII from "./PaginationII";
 
 function Content() {
   return (
@@ -15,7 +14,6 @@ function Content() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/products" element={<Products />} />
           <Route path="/orders" element={<Orders />} />
-          <Route path="/PaginationII" element={<PaginationII />} />
         </Routes>
       </div>
     </div>
