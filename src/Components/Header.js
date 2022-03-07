@@ -35,11 +35,6 @@ function Header() {
                   Orders
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link menu" to="/PaginationII">
-                  PaginationII
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

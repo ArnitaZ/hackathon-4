@@ -5,7 +5,7 @@ function Pagination() {
   return (
     <div>
       <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
+        <ul className="pagination justify-content-end">
           <li className="page-item">
             <Link className="page-link" to={""} aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
